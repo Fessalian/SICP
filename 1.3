@@ -1,0 +1,38 @@
+(define 
+  (square x)
+  (* x x)
+)
+
+(define 
+  (maxOfTwo x y)
+  (if (>= x y)
+     x
+     y
+  )  
+)
+
+(define 
+  (ex1_3 x y z)
+  (if (> x y) 
+      (+ (square x) 
+         (square(maxOfTwo y z)))
+      (+ (square y)
+         (square(maxOfTwo x z)))
+  )
+)
+
+
+;;TEST
+(ex1_3 3 1 2)
+---------------------------------
+13
+
+
+(ex1_3 1 2 3)
+---------------------------------
+13
+
+
+(ex1_3 2 3 1)
+---------------------------------
+13
